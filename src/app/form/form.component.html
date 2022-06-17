@@ -1,0 +1,22 @@
+
+
+<section class="converter">
+    <div class="first">
+        <h2>Give</h2>
+        <select #firstSelect  (change)="handleNumber(firstInput,secondInput,firstSelect,secondSelect)"  name="fist" id="1">
+            <option  value="{{USD}}">USD</option>
+            <option value="{{UAH}}">UAH</option>
+            <option value="{{EUR}}">EUR</option>
+        </select>
+        <input #firstInput (input)="handleNumber(firstInput,secondInput,firstSelect,secondSelect)"  type="text">
+    </div>
+    <div class="second">
+        <h2>Take</h2>
+        <select #secondSelect (input)="handleNumber(secondInput,firstInput,secondSelect,firstSelect)"  name="second" id="2">
+            <option  value="{{USD}}">USD</option>
+            <option selected value="{{UAH}}">UAH</option>
+            <option value="{{EUR}}">EUR</option>
+        </select>
+        <input #secondInput (input)="handleNumber(secondInput,firstInput,secondSelect,firstSelect)" type="text">
+    </div>
+</section>
